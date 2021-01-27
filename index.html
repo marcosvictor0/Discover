@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>dev.finance$</title>
+        <meta charset="UTF-8" /> <!--Formatação dos caracteres !-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- esse meta define se o conteúdo do html consegue ser responsivo para qualquer dispositivo.-->
+        <title>dev.finance$</title> <!--tag de título da página-->
 
         <link rel="stylesheet" href="./style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body> <!--tudo que você ver na página como usuário-->
         <header>
-            <h1 id="logo">dev.finance$</h1>
+            <h1 id="logo">dev.finance$</h1> <!--tag responsável por fazer textos grandes-->
         </header>
 
         <main class="container">
             <section id="balance">
-                <h2>Balanço</h2>
+                <h2>Balanço</h2> <!--tag também responsável por fazer texto grande, só que menor que o h1, seguindo uma linha digamos que herança... -->
 
                 <div class="card">
                     <h3>Entradas</h3>
@@ -38,15 +38,15 @@
             <section id="transaction">
                 <h2>Transações</h2>
                 <table id="data-table">
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
+                    <thead> <!--Cabeçalho da tabela-->
+                        <tr><!-- É uma linha -->
+                            <th>Descrição</th> <!--É o conteúdo da head, oq que vai aparecer pra pessoa-->
                             <th>Valor</th>
                             <th>Data</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody> <!--O corpo da tabela-->
+                        <tr> <!--É uma linha -->
                             <td class="description">Luz</td>
                             <td class="expense">- R$ 500,00</td>
                             <td class="date">23/01/2021</td>
@@ -65,7 +65,7 @@
                 </table>
             </section>
         </main>
-
-        <footer><p>dev.finance$</p></footer>
+        
+        <footer><p>dev.finance$</p></footer> <!--É uma tag semântica-->
     </body>
 </html>
