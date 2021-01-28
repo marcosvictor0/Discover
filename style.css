@@ -1,31 +1,38 @@
 /* Global ===================== */
+/* em relação de tag de hierarquia, a tag ID, será o mais poderoso. Ficando assim ----> ID < Injeção dentro do HTML com a tag style 
+<style> dentro da tag html, por exemplo: <h1 style="color:gray < e o mais o forte é o !important; dentro do CSS. Exemplo: 
+h1 {
+    color: red !important;
+}">*/
 :root {
     --dark-blue: #363f5f;
-}
+} /* ELE É UM SELETOR QUE VAI REFERÊNCIAR  A RAIZ DO HTML*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    margin: 0; /* é a margem, espaçamento que você tem entre um elemento e outro, parte externa do elemento*/
+    padding: 0; /* Preenchimento interno dos elementos */
+    box-sizing: border-box; /* É como está sendo feito a medida da caixa */
+} /*
+    isso é um seletor universal, ele seleciona todas as tags que eu tiver no CSS
+    */
 
 body {
-    background: #f0f2f5;
-    font-family:'Poppins', sans-serif
+    background: #f0f2f5; /* é para alterar o fundo da página*/
+    font-family:'Poppins', sans-serif; /* Familia da fonte da escrita que você quiser.*/
 }
 
 .container {
-    width: min(90vw, 800px);
+    width: min(90vw, 800px); /*Largura */
     margin: auto;
 }
 
 /* Titles ===================== */
 h2 {
     margin-top: 3.2rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.8rem; /* Espaçamento a baixo do titulo*/
     color: var(--dark-blue);
 
-    font-weight: normal;
+    font-weight: normal; /* É a tonalidade da cor do texto*/
 }
 
 
@@ -33,17 +40,17 @@ h2 {
 header {
     background: #2D4A22;
     padding: 2rem 0 10rem;
-    text-align: center;
+    text-align: center; /*Alinha o conteúdo ao centro. */
 }
 
 #logo {
     color: #fff;
-    font-weight: 100;
+    font-weight: 100; /* Peso da fonte*/
 }
 
 /* Balance ===================== */
 #balance {
-    margin-top: -8rem;
+    margin-top: -8rem; /*Subiu o texto */
 }
 
 #balance h2 {
@@ -55,23 +62,23 @@ header {
 .card {
     background: white;
     padding: 1.5rem 2rem;
-    border-radius: 0.25rem;
+    border-radius: 0.25rem; /* arredondamento das bordas */
 
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Espaçamento em baixo */
 
     color: var(--dark-blue);
 }
 
 .card h3 {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1rem; /* Tamanho da fonte*/
 }
 
 .card p {
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3rem; /* Separação de uma linha para outra.*/
 
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 }
 
 .card.total {
@@ -81,13 +88,13 @@ header {
 
 /* Table ===================== */
 #data-table {
-    width: 100%;
-    border-spacing: 0 0.5rem;
+    width: 100%; /*Largura de 100% */
+    border-spacing: 0 0.5rem; /* ele tirou a separação de bordar que vem por padrão na tabela, que foi 0 para vertical e dps add 0.5 no eixo horizontal*/
     color: #969cb3;
 }
 
-table thead tr th:first-child, 
-table tbody tr td:first-child{
+table thead tr th:first-child,  /*ele vai trabalhar na busca do primeiro filho que foi do tr, ele vai pegar o primeiro th dentro do tr */
+table tbody tr td:first-child{  /*ele vai trabalhar na busca do primeiro filho que foi do tr, ele vai pegar o primeiro td dentro do tr */
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
