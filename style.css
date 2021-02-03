@@ -16,9 +16,26 @@ h1 {
     isso é um seletor universal, ele seleciona todas as tags que eu tiver no CSS
     */
 
+html {
+    font-size: 93.75%; /* 15px */
+}
+
 body {
     background: #f0f2f5; /* é para alterar o fundo da página*/
     font-family:'Poppins', sans-serif; /* Familia da fonte da escrita que você quiser.*/
+}
+
+.sr-only{ /* mudar a posição da caixa.
+    ele está mantendo a palavra dessa classe na página para os leitores de tela, mas para os nossos olhos eles não estão la.*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .container {
@@ -35,6 +52,21 @@ h2 {
     font-weight: normal; /* É a tonalidade da cor do texto*/
 }
 
+/* Links and Buttons ===================== */
+
+a {
+    color: #49AA26;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3dd705;
+}
+
+.button.new{ /* no INLINE não da para usar o margin-bottom, por isso colocamos o INLINE-EBLICK, caso fosse só o BLOCK, ele iria pegar a caixa toda, no caso 100% da largura*/
+    display: inline-block;
+    margin-bottom: .8rem;
+}
 
 /* Header ===================== */
 header {
@@ -72,13 +104,16 @@ header {
 .card h3 {
     font-weight: normal;
     font-size: 1rem; /* Tamanho da fonte*/
+    display: flex; /* Ele muda o comportamento dos elementos dentro da caixa, fazendo com que ele fica um ao lado do outro ao invés de um a baixo do outro*/
+    align-items: center;
+    justify-content: space-between; /* Significa espaço entre os elementos*/
 }
 
 .card p {
     font-size: 2rem;
     line-height: 3rem; /* Separação de uma linha para outra.*/
 
-    margin-top: 0.25rem;
+    margin-top: 0.41rem;
 }
 
 .card.total {
@@ -88,9 +123,12 @@ header {
 
 /* Table ===================== */
 #data-table {
+    display: block;
     width: 100%; /*Largura de 100% */
     border-spacing: 0 0.5rem; /* ele tirou a separação de bordar que vem por padrão na tabela, que foi 0 para vertical e dps add 0.5 no eixo horizontal*/
     color: #969cb3;
+
+    overflow-x: auto;
 }
 
 table thead tr th:first-child,  /*ele vai trabalhar na busca do primeiro filho que foi do tr, ele vai pegar o primeiro th dentro do tr */
@@ -98,6 +136,10 @@ table tbody tr td:first-child{  /*ele vai trabalhar na busca do primeiro filho q
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
+table thead tr th:last-child,  /*ele vai trabalhar na busca do primeiro filho que foi do tr, ele vai pegar o primeiro th dentro do tr */
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
 table thead th {
     background: white;
 
@@ -140,3 +182,16 @@ footer {
 
     opacity: 0.6;
 } 
+
+/* Responsive ===================== */
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%; /* 14px*/
+    }
+
+    #balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /*pode ser feito dessa forma tbm -> grid-template-columns: repeat(3, 1fr); */
+        gap: 2rem;
+    }
+}
