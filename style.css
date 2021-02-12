@@ -6,6 +6,7 @@ h1 {
 }">*/
 :root {
     --dark-blue: #363f5f;
+    --green: #49AA26;
 } /* ELE É UM SELETOR QUE VAI REFERÊNCIAR  A RAIZ DO HTML*/
 
 * {
@@ -55,7 +56,7 @@ h2 {
 /* Links and Buttons ===================== */
 
 a {
-    color: #49AA26;
+    color: var(--green);
     text-decoration: none;
 }
 
@@ -63,9 +64,30 @@ a:hover{
     color: #3dd705;
 }
 
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    color: white;
+    background: var(--green);
+
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
 .button.new{ /* no INLINE não da para usar o margin-bottom, por isso colocamos o INLINE-EBLICK, caso fosse só o BLOCK, ele iria pegar a caixa toda, no caso 100% da largura*/
     display: inline-block;
     margin-bottom: .8rem;
+}
+
+.button-cancel {
+
 }
 
 /* Header ===================== */
@@ -117,18 +139,21 @@ header {
 }
 
 .card.total {
-    background: #49AA26;
+    background: var(--green);
     color: white;
 }
 
 /* Table ===================== */
-#data-table {
+#transaction{
     display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
     width: 100%; /*Largura de 100% */
     border-spacing: 0 0.5rem; /* ele tirou a separação de bordar que vem por padrão na tabela, que foi 0 para vertical e dps add 0.5 no eixo horizontal*/
     color: #969cb3;
-
-    overflow-x: auto;
 }
 
 table thead tr th:first-child,  /*ele vai trabalhar na busca do primeiro filho que foi do tr, ele vai pegar o primeiro th dentro do tr */
@@ -172,6 +197,69 @@ td.income {
 
 td.expense {
     color: #e92929;
+}
+
+/* Modal ===================== */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #F0F2f5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Form ===================== */
+#form{
+    max-width: 500px;
+}
+
+#form h2{
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small{
+    opacity: 0.7;
+}
+
+.input-group.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.action.button,
+.input-group.action button{
+    width: 48%;
 }
 
 /* Footer ===================== */
