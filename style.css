@@ -7,6 +7,8 @@ h1 {
 :root {
     --dark-blue: #363f5f;
     --green: #49AA26;
+    --green-light: #1a6b3e;
+    --red: #e92929;
 } /* ELE É UM SELETOR QUE VAI REFERÊNCIAR  A RAIZ DO HTML*/
 
 * {
@@ -61,11 +63,11 @@ a {
 }
 
 a:hover{
-    color: #3dd705;
+    color: var(--green-light);
 }
 
 button {
-    width: 100%;
+    width: 50%;
     height: 50px;
 
     border: none;
@@ -78,7 +80,7 @@ button {
 }
 
 button:hover{
-    opacity: 0.8;
+    background: var(--green-light);
 }
 
 .button.new{ /* no INLINE não da para usar o margin-bottom, por isso colocamos o INLINE-EBLICK, caso fosse só o BLOCK, ele iria pegar a caixa toda, no caso 100% da largura*/
@@ -87,7 +89,22 @@ button:hover{
 }
 
 .button-cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    width: 50%;
+    height: 50px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+
+.button-cancel:hover{
+    color: var(--red);
+    opacity: 1;
 }
 
 /* Header ===================== */
@@ -196,7 +213,7 @@ td.income {
 }
 
 td.expense {
-    color: #e92929;
+    color: var(--red);
 }
 
 /* Modal ===================== */
@@ -283,3 +300,12 @@ footer {
         gap: 2rem;
     }
 }
+
+/* 
+caso apareça um erro de o texto do footer ficar em cima do formulario, usa-se:
+na classe .modal {} e no .modal-overlay {};
+display: relative;
+z-index: 1; //esse "z-index", ele faz meio que um empilhamento do html, mudando posições.
+
+
+*/
