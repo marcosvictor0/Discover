@@ -14,7 +14,9 @@
 **Imagem da Terceira e ultima etapa do site**
 **[Semana 03]**
 ###Funcionalidades do site: Pode fazer uma nova transação, onde irá armazenar as entradas obtidas no localstorage do próprio navegador###
+
 ###Funcionalidades do site: Pode fazer uma exclusão da transação.###
+
 ###Funcionalidades do site: Faz a soma das Entradas e Saidas, retornando o valor TOTAL sendo positivo ou negativo.###
 
 <img src="https://i.pinimg.com/originals/59/6b/eb/596beb90914c57df28c7d066bb1588ab.png" alt="ImagemFinaldoProjeto">
@@ -22,5 +24,7 @@
 <hr>
 
 ###Teste feito adicionando na parte da Entrada uma Criação de um app, colocando o preço e a data feita, e colocando na Saida, uma Pizza, também juntamente com o preço e a data.###
+
 ###E no final mostrando o Total fazendo o calculo exato.###
+
 <img src="https://i.pinimg.com/originals/5c/af/74/5caf7474fe662a9a772b7441424578c1.png" alt="TestedoProjetoFinal">
