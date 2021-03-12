@@ -10,6 +10,7 @@
 **Imagem da segunda etapa do site**
 **[Semana 02]**
 <img src="https://i.pinimg.com/originals/69/3c/8e/693c8efa18a0a15aa89cd8d35d2f8b4c.png" alt="telacompletadoprojeto"/>
+<hr>
 
 **Imagem da Terceira e ultima etapa do site**
 **[Semana 03]**
